@@ -141,6 +141,10 @@ body {
   gap: 10px;
   font-size: 1rem;
   padding-bottom: 27px;
+  font-weight: bold;
+  max-height: 80vh;         
+  overflow-y: auto;        
+  box-sizing: border-box;
 }
 
 #contains-menu.active {
@@ -206,6 +210,43 @@ body {
   }
 }
 
-.icon-item {
-   
+.genre-menu {
+  margin-top: 10px;
+  padding-left: 10px;
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.genre-menu.active {
+  display: flex;
+}
+
+.genre-menu-item {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: normal;
+  position: relative;
+  width: 85%;
+}
+
+.genre-menu-item:hover {
+    background-color: rgb(29, 29, 29);
+}
+
+.genre-menu-item:active {
+  background-color: rgb(112, 112, 112);
+}
+
+
+.genre-menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0%;                    
+  width: 98%;                   
+  height: 1px;                  
+  background-color: white;     
 }
