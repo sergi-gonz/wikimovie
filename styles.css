@@ -192,9 +192,9 @@ body {
 }
 @media (max-width: 480px) {
     #contains-menu {
-        top: 55px; 
+        top: 60px; 
         left: 10px; 
-        width: 40vw; 
+        width: 48vw; 
         padding: 15px;
         padding-bottom: 35px;
     }
