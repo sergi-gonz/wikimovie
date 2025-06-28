@@ -1,5 +1,5 @@
  const video = document.getElementById('background-video');
-  video.playbackRate = 0.35;
+  video.playbackRate = 0.10;
 
 document.addEventListener("DOMContentLoaded", function () {
   const menuContainer = document.querySelector(".menu-container");
