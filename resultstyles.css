@@ -13,6 +13,7 @@ body {
     overflow: hidden;
 }
 
+
 .fixed-top {
     position: fixed;
     top: 0;
@@ -34,54 +35,155 @@ header {
     background-attachment: fixed; 
     display: flex;
     background-position: center center;  
+    position: relative;
 }
 
 .header-left,
 .header-center,
 .header-right {
-  height: 100%;
-  flex: 1;
+    height: 100%;
+    flex: 1;
+    padding-top: 1vh;
+    box-sizing: border-box;
+    margin: 5px;
 }
 
 .header-left {
-    position: relative;
+    display:flex;
+    justify-content: center; 
+    position: relative; 
+}
+
+.poster-holder{
+    width: clamp(195px,350px,350px);
+    aspect-ratio: 2 / 3;
+    background: black;
+    border: 1px solid yellow;
+    display: flex;
+    border-radius: 30px;
+    margin: 0 auto;
+    transform: translateY(10%);
+    box-shadow: 0px 0px 23px rgb(0, 0, 1);
+}
+
+.header-center, .header-right  {
+    display: block; 
+}
+
+.text-header{
+    color: white;
+}
+
+.title-movie {
+    display: block;
+    font-size: 39px;
+}
+
+.info-movie-1 {
+    display: block;
+    font-size: 15px;
+}
+
+.block-text-1 {
+    margin-top: 10px;
+    line-height: 1;
+}
+
+.block-text-2 {
+    line-height: 1.25;
+    margin-top: 160px;
+}
+
+.info-movie-2 {
+    display: block;
+    font-size: 19px;
 }
 
 .header-right {
-   text-align: right;
-   justify-content: flex-end; 
-   display: flex;
-   padding-right: 10px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between; 
 }
 
 .title-page {
     color: white;
     font-family: "Bungee Shade", sans-serif;
-    display: flex;
-    margin: 0;
-    font-size: clamp(20px, 2vw, 100px);
+    margin-top:-5px;
+    font-size: clamp(14px, 58px, 100px);
+    line-height: 1;
+    cursor: pointer;
 }
 
-.header-left { background: rgba(255,0,0,0.3); }
+.rating-circle {
+    display: flex;
+    justify-content: center;
+    height: 135px;
+    width: 135px;
+    background-color: transparent;
+    border-radius: 50%;
+    color: white;
+    min-width: 40px;
+    min-height: 40px;
+    align-items: center;
+    font-size: 39px;
+    margin-top: -45px;
+    cursor: pointer;
+    border: 10px solid white;
+}
+
+.icons {
+    display: flex;             
+    gap: 50px;                  
+    margin-top: -10px; 
+    margin-bottom: 10px;          
+    justify-content: center;   
+    cursor: pointer;
+}
+.rating-span {
+    display:flex;
+    margin-top: -90px;
+}
+.favourite, .pending {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -60px;
+    border-radius: 360px;
+    height: 30px;
+    width: 30px;
+}
+
+.favourite:hover,
+.pending:hover {
+    background-color: rgb(48, 48, 48);
+}
+
+.favourite:active,
+.pending:active {
+    background-color: grey;
+}
+/*.header-left { background: rgba(255,0,0,0.3); }
 .header-center { background: rgba(0,255,0,0.3); }
-.header-right { background: rgba(0,0,255,0.3); }
+.header-right { background: rgba(0,0,255,0.3); }*/
 
 .search-container {
     display: flex;
-    width: 42vw;
+    width: 807px;
     border-radius: 300px;
-    height: 1vw;
+    height: 2vw;
     border: 0.5px solid #fffcfc;
     align-items: center;
     overflow: hidden;
     min-width: 250px;
     min-height: 30px;
-    margin-top: 1vh;
 }
 
  .search-container input {
     padding: 20px;
-    width: 100%;
+    flex: 1;
     font-size: 1rem;
     color: #ffffff;
     background-color: black;
@@ -96,8 +198,8 @@ header {
 }
 
 .loupe-container {
-    width: 2vw;
-    height: 2vw;
+    width: 38px;
+    height: 38px;
     cursor: pointer;
     border-left: 1px solid white;
     padding: 8px;
@@ -111,22 +213,43 @@ header {
     background-color: black;
 }
 
-.poster-holder {
-    top: 60%;
-    left: 10%;
-    width: 14vw;
-    aspect-ratio: 2 / 3;
-    background-color: black;
-    border: 1px solid yellow;
-    z-index: 1000;
-    display: flex;
-    border-radius: 25px;
-    position: fixed;
-}
-
-.main {
+main {
     padding-top: 45vh; 
     overflow-y: auto;
     position: relative;
     z-index: 0;
+    display: flex;
+    gap: 20px;                
+    align-items: flex-start;  
+    justify-content: flex-start; 
+}
+
+.synopsis {
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    text-align: center;
+    margin: 80px 100px;
+    align-items: center;
+}
+
+.synopsis-title {
+    color: black;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.synopsis-text { 
+    color: black;
+    font-size: 1rem;
+}
+
+.trailer-grid {
+    width: 650px;
+    aspect-ratio: 16/9;
+    background-color: black;
+    margin: 70px 90px;
+    box-shadow: 0px 0px 23px rgb(0, 0, 1);
 }

@@ -19,6 +19,7 @@ body {
     z-index: -1;
     height: 100%;
     width: 100%;
+    filter: brightness(25%);
 }
 
 .container {
@@ -110,6 +111,7 @@ body {
     height: clamp(24px, 2vw, 60px);
     fill: white;
 }
+
 
 .menu-container:hover,
 .loupe-container:hover,
