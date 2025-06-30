@@ -36,6 +36,7 @@ header {
     display: flex;
     background-position: center center;  
     position: relative;
+    min-height: 45vh;
 }
 
 .header-left,
@@ -55,10 +56,9 @@ header {
 }
 
 .poster-holder{
-    width: clamp(195px,350px,350px);
+    width: 350px;
     aspect-ratio: 2 / 3;
     background: black;
-    border: 1px solid yellow;
     display: flex;
     border-radius: 30px;
     margin: 0 auto;
@@ -220,7 +220,7 @@ main {
     z-index: 0;                
     align-items: flex-start;  
     justify-content: flex-start; 
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(241, 241, 241);
 }
 
 .main-top {
@@ -273,4 +273,89 @@ main {
 
 .cast-subtitle {
     margin-top: -20px;
+}
+
+
+
+
+@media screen and (min-width: 2560px) {
+    .title-movie {
+        font-size: clamp(2.5rem, 3vw, 4rem);
+    }
+
+    .info-movie-1, .rating-span {
+        font-size: clamp(1rem, 1.3vw, 1.5rem);
+    }
+
+    .info-movie-2 {
+        font-size: clamp(1rem, 1.5vw, 1.7rem);
+    }
+
+    .search-container {
+        width: clamp(600px, 40vw, 1000px);
+        height: clamp(30px, 2.2vw, 60px);
+    }
+
+    .search-container input {
+        font-size: clamp(1rem, 1.2vw, 1.6rem);
+    }
+
+    .loupe-container {
+        width: clamp(38px, 2.5vw, 60px);
+        height: clamp(38px, 2.5vw, 60px);
+    }
+
+    .title-page {
+        font-size: clamp(3rem, 4vw, 6rem);
+    }
+
+    .rating-circle {
+        width: clamp(135px, 8vw, 300px);
+        height: clamp(135px, 8vw, 300px);
+        font-size: clamp(2rem, 3vw, 5rem);
+    }
+    
+    .rating-span {
+        margin-top: -220px;
+    }
+
+    .icons {
+        margin-bottom: 69px;
+        gap: 100px;
+    }
+
+    .icons svg  {
+        width: 48px;
+        height: 48px;
+    }
+
+    .favourite, .pending {
+        width: 60px;
+        height: 60px;
+    }
+
+    .titles-main {
+        font-size: clamp(3rem, 4vw, 5rem);
+    }
+
+    .main-texts {
+        font-size: clamp(1rem, 1.3vw, 1.5rem);
+    }
+
+    .trailer-grid {
+        width: clamp(700px, 40vw, 1000px);
+        margin: 200px 200px;
+    }
+
+    .poster-holder {
+        width: 950px;
+    }
+
+    .synopsis {
+        margin: 270px 100px;
+    }
+
+    .cast {
+        margin: 300px 100px;
+    }
 }
